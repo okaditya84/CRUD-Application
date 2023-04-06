@@ -22,6 +22,8 @@ Follow the steps to run the application:
   pip install -r requirements.txt
   flask run
 ```
+- You need to activate the virtual environment
+
 Follow the following steps if you want to connect your own database:
 - You need a MongoDB account to view the data
 - Make a cluster and a database and connect with a string.
