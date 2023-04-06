@@ -1,0 +1,95 @@
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F8F8F8;
+}
+
+/* Header styles */
+h1 {
+  font-size: 36px;
+  text-align: center;
+  color: #2b2165;
+  margin-top: 50px;
+}
+
+/* Link styles */
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  background-color: #4CAF50;
+  margin: 20px;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #3E8E41;
+}
+
+/* align div to center */
+div {
+  text-align: center;
+}
+
+/* apply the same button settings to submit class
+    to make the button look the same */
+.submit {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  background-color: #4CAF50;
+  margin: 20px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"] {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: darkgreen;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.main{
+  margin: 10%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.box{
+  border: 2px solid black;
+}
+
+.users{
+  margin-left: auto;
+  margin-right: auto;
+}

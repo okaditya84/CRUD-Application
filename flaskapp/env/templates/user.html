@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+	<meta charset="UTF-8">
+	<title>Update User</title>
+  </head>
+  <body>
+	<div>
+	<h1>Update User</h1>
+	<form action="/users/{{ user['_id'] }}/update" method="post">
+		<label for="name">Name:</label><br>
+		<input type="text" id="name" name="name" value="{{ user['name'] }}"><br>
+		<label for="email">Email:</label><br>
+		<input type="email" id="email" name="email" value="{{ user['email'] }}"><br>
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password" value="{{ user['password'] }}"><br>
+		<input type="submit" value="Update" >
+	</form>
+	<br>
+	<a href="{{ url_for('get_all_users') }}">Back</a>
+	</div>
+	
+  </body>
+</html>

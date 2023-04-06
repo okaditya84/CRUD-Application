@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Users</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div>
+        <h1>Users</h1>
+        <table class="users">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <hr>
+                <br>
+                <br>
+            </tr>
+            {% for user in users %}
+            <div >
+              <tr>
+                <td class="box">{{ user["_id"] }}</td>
+                <td class="box">{{ user["name"] }}</td>
+                <td class="box">{{ user["email"] }}</td>
+                <td class="box">*********</td>
+                <td><a href="{{ url_for('update_user', user_id=user['_id']) }}">Edit</a></td>
+                <td>
+                  <form action="/users/{{ user['_id'] }}/delete" method="post">
+                    <input type="submit" value="Delete">
+                  </form>
+                </td>
+              </tr>
+            </div>
+              {% endfor %}
+        </table>
+        <br>
+        <a href="/">Back</a>
+    </div>
+</body>
+</html>
